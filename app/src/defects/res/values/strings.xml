@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="defect_missing_translation">Fixture translation missing</string>
+    <string name="defect_format_argument">%1$d tasks</string>
+</resources>

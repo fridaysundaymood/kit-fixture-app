@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Task Board</string>
+    <string name="boards">Boards</string>
+    <string name="general">General</string>
+    <string name="add_task">Add task</string>
+    <string name="task_title">Task title</string>
+    <string name="save">Save</string>
+    <string name="settings">Settings</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="bahasa_indonesia">Bahasa Indonesia</string>
+    <string name="indonesian">Bahasa Indonesia</string>
+    <string name="members">Members</string>
+    <string name="back">Back</string>
+    <string name="no_tasks_yet">No tasks yet</string>
+    <string name="no_tasks">No tasks yet</string>
+    <string name="add_a_task">Add a task</string>
+    <string name="sync">Sync</string>
+    <string name="sync_failed">Sync failed</string>
+    <string name="task_could_not_be_saved">Task could not be saved</string>
+    <string name="save_failed">Task could not be saved</string>
+    <string name="crash_test">Crash test</string>
+    <string name="status_todo">Todo</string>
+    <string name="status_doing">Doing</string>
+    <string name="status_done">Done</string>
+    <string name="priority_low">Low</string>
+    <string name="priority_high">High</string>
+    <string name="endpoint">Endpoint</string>
+    <string name="apply">Apply</string>
+    <string name="select_priority">Select priority</string>
+    <string name="select_status">Select status</string>
+    <string name="refresh">Refresh</string>
+    <string name="debug_options">Debug options</string>
+    <string name="no_members">No members</string>
+    <string name="sync_complete">Sync complete</string>
+    <string name="task_count">%1$d tasks</string>
+</resources>

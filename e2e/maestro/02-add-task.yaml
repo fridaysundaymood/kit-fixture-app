@@ -1,0 +1,15 @@
+# Intent: add a task to the General board.
+appId: dev.androidkit.fixture
+---
+- clearState
+- launchApp
+- extendedWaitUntil:
+    visible: "Boards"
+    timeout: 10000
+- tapOn: "General"
+- tapOn: "Add task"
+- tapOn: "Task title"
+- inputText: "Prepare fixture"
+- hideKeyboard
+- tapOn: "Save"
+- assertVisible: "Prepare fixture"

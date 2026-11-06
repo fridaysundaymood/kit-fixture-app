@@ -1,0 +1,9 @@
+# Intent: open the seeded board list from a clean app state.
+appId: dev.androidkit.fixture
+---
+- clearState
+- launchApp
+- extendedWaitUntil:
+    visible: "Boards"
+    timeout: 10000
+- assertVisible: "General"

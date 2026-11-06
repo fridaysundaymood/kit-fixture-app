@@ -1,0 +1,11 @@
+# Intent: select Indonesian in settings.
+appId: dev.androidkit.fixture
+---
+- clearState
+- launchApp
+- extendedWaitUntil:
+    visible: "Boards"
+    timeout: 10000
+- tapOn: "Settings"
+- tapOn: "Bahasa Indonesia"
+- assertVisible: "Papan"

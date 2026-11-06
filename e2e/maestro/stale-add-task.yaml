@@ -1,0 +1,10 @@
+# Intent: demonstrate stale copy detection; the current control says Add task.
+appId: dev.androidkit.fixture
+---
+- clearState
+- launchApp
+- extendedWaitUntil:
+    visible: "Boards"
+    timeout: 10000
+- tapOn: "General"
+- tapOn: "New task"
