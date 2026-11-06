@@ -62,7 +62,6 @@ private fun Taskboard(activity: MainActivity) {
     var key by remember { mutableStateOf("") }
     val defects = BuildConfig.FLAVOR == "defects"
     val syncFailed = stringResource(R.string.sync_failed)
-    val saveFailed = stringResource(R.string.task_could_not_be_saved)
     val syncComplete = stringResource(R.string.sync_complete)
 
     suspend fun refresh() {
@@ -142,7 +141,7 @@ private fun Taskboard(activity: MainActivity) {
                                 refresh()
                                 page = "board"
                             } catch (e: Exception) {
-                                FixtureBehavior.saveError(snackbar, e, saveFailed)
+                                FixtureBehavior.saveError(context, snackbar, e)
                             }
                         }
                     }) { Text(stringResource(R.string.save)) }

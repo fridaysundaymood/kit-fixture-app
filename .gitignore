@@ -6,3 +6,5 @@ local.properties
 .env
 .env.*
 !.env.example
+.android-kit/
+selectors.json
