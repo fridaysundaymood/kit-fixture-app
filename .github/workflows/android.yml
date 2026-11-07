@@ -16,5 +16,7 @@ jobs:
       - name: Install Android SDK packages
         run: SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"; (yes || true) | "$SDKMANAGER" --licenses >/dev/null; "$SDKMANAGER" --install 'platform-tools' 'platforms;android-36' 'build-tools;36.0.0'
       - uses: gradle/actions/setup-gradle@v4
-      - name: Assemble, unit test, and lint both flavors
-        run: ./gradlew assembleCleanDebug assembleDefectsDebug testCleanDebugUnitTest testDefectsDebugUnitTest lintCleanDebug lintDefectsDebug
+      - name: Assemble, unit test, and lint clean flavor
+        run: ./gradlew assembleCleanDebug assembleDefectsDebug testCleanDebugUnitTest testDefectsDebugUnitTest lintCleanDebug
+      - name: Lint defects flavor (intentional findings, report only)
+        run: ./gradlew --continue lintDefectsDebug || true
