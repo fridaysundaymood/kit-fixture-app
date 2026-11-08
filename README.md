@@ -2,6 +2,17 @@
 
 A fully synthetic Android task board and golden target for the android-kit tools. Boards contain shared tasks with stable status and priority identifiers. The application keeps a local Room database; its sync client targets a Supabase project configured at build time.
 
+The sync client authenticates before sending local boards and tasks to Supabase.
+
+```mermaid
+flowchart LR
+    Room["Local Room database"] --> Sync["Sync client"]
+    Sync --> Auth["Supabase Auth"]
+    Auth -->|access token| Sync
+    Sync -->|boards, then tasks| REST["Supabase REST API"]
+    REST --> DB["Postgres tables"]
+```
+
 ## Flavors
 
 - `clean`: baseline for correct localization, labels, and database policies.
