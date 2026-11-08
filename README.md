@@ -35,7 +35,6 @@ flowchart LR
     State --> Emulator["emu-lab"]
     Crash --> Emulator
     RLS --> Harness["supa-multiuser-harness"]
-    RLS --> Gate["supa-release-gate-mcp"]
     Race --> Harness
 ```
 

@@ -14,5 +14,5 @@ These are test inputs, not production behavior. The Android defects are selected
 | UI-STALE | maestro-flow / emu-lab | `e2e/maestro/stale-add-task.yaml` selects obsolete `New task`; the app says `Add task`. |
 | STATE-LEAK | emu-lab | `app/src/androidTestDefects/java/dev/androidkit/fixture/StateLeakTest.kt`: test B depends on test A's preferences. |
 | CRASH | emu-lab | `app/src/main/java/dev/androidkit/fixture/MainActivity.kt` debug settings crash action. |
-| DEFECT-RLS-001 | supa-multiuser-harness / supa-release-gate-mcp | `supabase/defects/20260103000000_cross_board_read_and_counter_race.sql:2` permits cross-board reads. |
+| DEFECT-RLS-001 | supa-multiuser-harness | `supabase/defects/20260103000000_cross_board_read_and_counter_race.sql:2` permits cross-board reads. |
 | DEFECT-RACE-001 | supa-multiuser-harness | `supabase/defects/20260103000000_cross_board_read_and_counter_race.sql:5` replaces atomic increment with read/modify/write. |
