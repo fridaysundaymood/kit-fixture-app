@@ -18,6 +18,27 @@ flowchart LR
 - `clean`: baseline for correct localization, labels, and database policies.
 - `defects`: deliberately broken examples. See [DEFECTS.md](DEFECTS.md) before interpreting findings. Never deploy the defect migration to a real project.
 
+The map shows intended detectors, not guaranteed findings. The stale journey and optional database migration are separate test inputs; neither is enabled by choosing a flavor.
+
+```mermaid
+flowchart LR
+    Clean["clean flavor"] --> Baseline["Localized display, canonical sync IDs and labeled settings"]
+    Defects["defects flavor"] --> Localization["L1-L6: localization defects"]
+    Defects --> Unlabeled["UI-UNLABELED: settings icon"]
+    Defects --> State["STATE-LEAK: ordered tests"]
+    Defects --> Crash["CRASH: debug settings action"]
+    Stale["UI-STALE: stale Maestro journey"] --> UItools["maestro-flow / emu-lab"]
+    Migration["Optional defect SQL migration"] --> RLS["DEFECT-RLS-001: cross-board reads"]
+    Migration --> Race["DEFECT-RACE-001: counter race"]
+    Localization --> Linter["indonesian-english-linter"]
+    Unlabeled --> UItools
+    State --> Emulator["emu-lab"]
+    Crash --> Emulator
+    RLS --> Harness["supa-multiuser-harness"]
+    RLS --> Gate["supa-release-gate-mcp"]
+    Race --> Harness
+```
+
 Build with JDK 21 and the Android SDK: `./gradlew assembleCleanDebug assembleDefectsDebug assembleCleanDebugAndroidTest testCleanDebugUnitTest`. CI also runs lint. `e2e/maestro` contains three passing journeys for the clean flavor and one deliberately stale selector; journey tables are in `e2e/journeys`.
 
 ## Local backend
