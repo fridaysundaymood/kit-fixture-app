@@ -17,11 +17,6 @@ class SyncClient(context: Context) {
             .remove("refresh_token").apply()
     }
 
-    fun clearDebugOverride() {
-        check(BuildConfig.DEBUG) { "Endpoint overrides require a debug build" }
-        preferences.edit().remove("url").remove("key").remove("refresh_token").apply()
-    }
-
     fun sync(
         boards: List<Board>,
         tasks: List<Task>,

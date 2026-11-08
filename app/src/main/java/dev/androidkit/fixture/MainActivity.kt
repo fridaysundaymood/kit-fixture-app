@@ -155,7 +155,7 @@ private fun Taskboard(activity: MainActivity) {
                     if (BuildConfig.DEBUG) {
                         Text(stringResource(R.string.debug_options), style = MaterialTheme.typography.titleLarge)
                         OutlinedTextField(endpoint, { endpoint = it }, label = { Text(stringResource(R.string.endpoint)) }, singleLine = true)
-                        OutlinedTextField(key, { key = it }, label = { Text("API key") }, singleLine = true)
+                        OutlinedTextField(key, { key = it }, label = { Text(stringResource(R.string.api_key)) }, singleLine = true)
                         TextButton(onClick = { sync.setDebugOverride(endpoint, key) }) { Text(stringResource(R.string.apply)) }
                         if (defects) TextButton(onClick = { error("Synthetic crash") }) { Text(stringResource(R.string.crash_test)) }
                     }

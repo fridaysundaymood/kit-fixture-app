@@ -27,6 +27,7 @@
     <string name="priority_low">Rendah</string>
     <string name="priority_high">Tinggi</string>
     <string name="endpoint">Titik akhir</string>
+    <string name="api_key">Kunci API</string>
     <string name="apply">Terapkan</string>
     <string name="select_priority">Pilih prioritas</string>
     <string name="select_status">Pilih status</string>

@@ -8,3 +8,12 @@ local.properties
 !.env.example
 .android-kit/
 selectors.json
+.kotlin/
+.vscode/
+*.jks
+*.keystore
+*.pem
+*.p12
+google-services.json
+dist/
+node_modules/

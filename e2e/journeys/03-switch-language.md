@@ -1,6 +1,6 @@
 # Switch language
 
-Precondition: install either fixture flavor and use English as the initial app language. Start with cleared app data.
+Precondition: install the clean fixture flavor and use English as the initial app language. Start with cleared app data.
 
 | Step | Expected UI |
 | --- | --- |

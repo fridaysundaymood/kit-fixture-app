@@ -7,7 +7,7 @@ These are test inputs, not production behavior. The Android defects are selected
 | L1 | indonesian-english-linter RawIdDisplay | `app/src/defects/java/dev/androidkit/fixture/FixtureBehavior.kt:8` displays `status.id`. |
 | L2 | indonesian-english-linter IdInTranslation | `app/src/defects/res/values-in/strings.xml:3` embeds the canonical `todo` id. |
 | L3 | indonesian-english-linter ExceptionToUi | `app/src/defects/java/dev/androidkit/fixture/FixtureBehavior.kt:10` shows `error.message` in a Snackbar. |
-| L4 | indonesian-english-linter LocalizedExceptionSwallowed | `app/src/defects/java/dev/androidkit/fixture/FixtureBehavior.kt:11` logs the localized message instead of showing it. |
+| L4 | indonesian-english-linter LocalizedExceptionSwallowed | `app/src/defects/java/dev/androidkit/fixture/FixtureBehavior.kt:13` logs the localized message instead of showing it. |
 | L5 | indonesian-english-linter MissingLocaleKey / format checks | `app/src/defects/res/values/strings.xml` and `app/src/defects/res/values-in/strings.xml:4`: a missing Indonesian key and incompatible `%d` / `%s` arguments. |
 | L6 | indonesian-english-linter LocalizedDataLeak | `app/src/defects/java/dev/androidkit/fixture/FixtureBehavior.kt:9` supplies localized status to sync. |
 | UI-UNLABELED | maestro-flow / emu-lab | `app/src/main/java/dev/androidkit/fixture/MainActivity.kt` settings icon has null contentDescription in defects. |
